@@ -35,7 +35,7 @@
     "chai": "^3.5.0",
     "eslint-plugin-flowtype": "^2.30.0",
     "flow-bin": "^0.40.0",
-    "husky": "^0.11.9",
+    "husky": "^0.13.2",
     "json-loader": "~0.5.0",
     "mocha": "^3.2.0",
     "serverless": "1.8.0",
