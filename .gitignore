@@ -1,0 +1,5 @@
+/admin.env
+node_modules/*
+dist/*
+.serverless/*
+npm-debug.log

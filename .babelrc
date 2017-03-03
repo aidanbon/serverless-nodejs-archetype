@@ -1,0 +1,14 @@
+{
+    "presets": [
+      ["env", {
+        "targets": {
+          "node": 4.3
+        }
+      }],
+      "stage-1"
+    ],
+    "plugins": [
+        "add-module-exports",
+        "transform-flow-strip-types"
+    ]
+}

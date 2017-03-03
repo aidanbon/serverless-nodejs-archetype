@@ -1,0 +1,54 @@
+{
+        "resource": "/integration/{providerID}/{proxy+}",
+        "path": "/integration/flex/foo/bar",
+        "httpMethod": "POST",
+        "headers": {
+            "Accept": "*/*",
+            "CloudFront-Forwarded-Proto": "https",
+            "CloudFront-Is-Desktop-Viewer": "true",
+            "CloudFront-Is-Mobile-Viewer": "false",
+            "CloudFront-Is-SmartTV-Viewer": "false",
+            "CloudFront-Is-Tablet-Viewer": "false",
+            "CloudFront-Viewer-Country": "US",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Host": "z0vs4k00b9.execute-api.us-west-2.amazonaws.com",
+            "User-Agent": "curl/7.43.0",
+            "Via": "1.1 1c6cc78b8ca6319854350cf7a741a470.cloudfront.net (CloudFront)",
+            "X-Amz-Cf-Id": "x-ydrs7CG9MlLhIIioPfx5QP8cgcDw7nc-q54-XFCN8lQN7dZvGhow==",
+            "X-Amzn-Trace-Id": "Root=1-58b61b15-517f7c921f11eb4410b7450e",
+            "X-Forwarded-For": "64.124.200.2, 54.239.203.64",
+            "X-Forwarded-Port": "443",
+            "X-Forwarded-Proto": "https"
+        },
+        "queryStringParameters": null,
+        "pathParameters": {
+            "proxy": "foo/bar",
+            "providerID": "flex"
+        },
+        "stageVariables": null,
+        "requestContext": {
+            "accountId": "214273208151",
+            "resourceId": "uaomyu",
+            "stage": "v1",
+            "requestId": "371f6319-fe19-11e6-a3f8-d96d6004465c",
+            "identity": {
+                "cognitoIdentityPoolId": null,
+                "accountId": null,
+                "cognitoIdentityId": null,
+                "caller": null,
+                "apiKey": null,
+                "sourceIp": "64.124.200.2",
+                "accessKey": null,
+                "cognitoAuthenticationType": null,
+                "cognitoAuthenticationProvider": null,
+                "userArn": null,
+                "userAgent": "curl/7.43.0",
+                "user": null
+            },
+            "resourcePath": "/integration/{providerID}/{proxy+}",
+            "httpMethod": "POST",
+            "apiId": "z0vs4k00b9"
+        },
+        "body": "{foo: 1, bar: 2}",
+        "isBase64Encoded": false
+}

@@ -1,0 +1,38 @@
+{
+    "Records": [
+      {
+        "eventVersion": "2.0",
+        "eventSource": "aws:s3",
+        "awsRegion": "us-west-2",
+        "eventTime": "2017-03-02T23:14:33.579Z",
+        "eventName": "ObjectCreated:Put",
+        "userIdentity": {
+          "principalId": "AWS:AIDAJTX4NJNVNHHHIBVSA"
+        },
+        "requestParameters": {
+          "sourceIPAddress": "64.124.200.2"
+        },
+        "responseElements": {
+          "x-amz-request-id": "8388D2D41EB0C8CD",
+          "x-amz-id-2": "0fF4WZr6ibW4yIG1K/WzO/r5080FlxlEir84VZagdt5LEWFRA2Q/91KdqJPXf4YQ"
+        },
+        "s3": {
+          "s3SchemaVersion": "1.0",
+          "configurationId": "3a2efade-4c62-44d9-a3ef-7fb5d7786081",
+          "bucket": {
+            "name": "test-serverless",
+            "ownerIdentity": {
+              "principalId": "A3JUORBLKFZEP4"
+            },
+            "arn": "arn:aws:s3:::test-serverless"
+          },
+          "object": {
+            "key": "prod/date.json",
+            "size": 65,
+            "eTag": "4ad307052eba63f7a002e3082165283d",
+            "sequencer": "0058B8A7598C76ACAF"
+          }
+        }
+      }
+    ]
+}

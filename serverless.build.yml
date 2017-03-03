@@ -1,0 +1,25 @@
+# method: file
+# tryFiles:
+#   - webpack.config.js
+#   - gulpfile.babel.js
+
+method: bundle
+
+sourceMaps : true
+babel      : false # dist/ folder already transpile via npm scripts
+babili     : false
+uglify     : false # Wont make a big difference on small projects
+
+modules:
+  exclude: [
+    aws-sdk
+  ]
+
+  # deepExclude: # excluded from nested node_modules
+  #   - xmlbuilder # this breaks the build
+  #   - punycode # this breaks the build
+
+functions:
+  echo:
+    include:
+      - "dist/**"

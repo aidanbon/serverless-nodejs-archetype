@@ -1,0 +1,57 @@
+{
+  "name": "serverless-nodejs-archetype",
+  "description": "AWS Lambda boilerplate for Node.js using Serverless Framework",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "standard --verbose 'src/**' | snazzy && flow",
+    "transpile": "rm -fr dist/* && babel src --out-dir dist",
+    "test": "npm run lint && npm run transpile && mocha --timeout 20000 'test/**/*-test.js'",
+    "precommit": "npm run test",
+    "deploy": "npm run transpile && time sls deploy -v",
+    "deploy:prod": "npm run transpile && time sls deploy -v --env prod",
+    "deploy:func": "npm run transpile && time sls deploy function -f echo -v",
+    "redeploy": "sls remove && npm run deploy",
+    "remove": "sls remove -v",
+    "tail": "sls logs -f echo -t ",
+    "test:invoke:http": "sls invoke --function echo --path test/events/http-post.json",
+    "test:invoke:s3": "sls invoke --function echo --path test/events/s3-put.json",
+    "test:curl": "curl -X POST https://xxxx.execute-api.us-west-2.amazonaws.com/v1/echo/flex/shipment -d '{foo:1, bar:2}'"
+  },
+  "dependencies": {
+    "aws-sdk": "latest"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-add-module-exports": "^0.2.0",
+    "babel-plugin-transform-async-to-module-method": "~6.16.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-runtime": "~6.15.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-env": "latest",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-1": "~6.16.0",
+    "babel-runtime": "~6.18.0",
+    "chai": "^3.5.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "flow-bin": "^0.40.0",
+    "husky": "^0.11.9",
+    "json-loader": "~0.5.0",
+    "mocha": "^3.2.0",
+    "serverless": "1.8.0",
+    "serverless-build-plugin": "1.1.2",
+    "snazzy": "^6.0.0",
+    "source-map-support": "latest",
+    "standard": "^9.0.0"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ],
+    "ignore": [
+      "dist/",
+      "test/"
+    ]
+  }
+}
