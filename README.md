@@ -23,7 +23,7 @@ wrapped as NPM scripts and can be easily be added to continuous integration/depl
 To checkout and CD to the module:
 
 ```
-git clone git@github.com:aidanbon/serverless-nodejs-archetype.git && cd serverless-nodejs-archetype
+git clone git@github.com:aidanbon/serverless-nodejs-archetype.git && cd serverless-nodejs-archetype && npm i
 ```
 
 In the next section, we'll describe the various life-cycle commands.
