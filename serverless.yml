@@ -1,10 +1,10 @@
-service: archetype
-frameworkVersion: "=1.8.0"
+service: serverless-nodejs-archetype
+frameworkVersion: "=1.9.0"
 
 provider:
   name    : aws
-  runtime : nodejs4.3
-  region  : us-west-2  # default us-east-1
+  runtime : nodejs6.10
+  region  : us-east-1
   stage   : v1
   versionFunctions: false
   environment:
@@ -29,7 +29,7 @@ functions:
           method: post
           path: echo/{providerID}/{proxy+}
       - s3:
-          bucket: test-serverless
+          bucket: ${self:service}
           event: s3:ObjectCreated:*
           rules:
             - prefix: ${self:functions.echo.environment.MY_ENV}

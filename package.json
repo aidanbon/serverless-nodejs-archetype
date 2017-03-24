@@ -10,12 +10,11 @@
     "deploy": "npm run transpile && time sls deploy -v",
     "deploy:prod": "npm run transpile && time sls deploy -v --env prod",
     "deploy:func": "npm run transpile && time sls deploy function -f echo -v",
-    "redeploy": "sls remove && npm run deploy",
     "remove": "sls remove -v",
     "tail": "sls logs -f echo -t ",
     "test:invoke:http": "sls invoke --function echo --path test/events/http-post.json",
     "test:invoke:s3": "sls invoke --function echo --path test/events/s3-put.json",
-    "test:curl": "curl -X POST https://xxxx.execute-api.us-west-2.amazonaws.com/v1/echo/flex/shipment -d '{foo:1, bar:2}'"
+    "test:curl": "curl -X POST https://xxx.execute-api.us-east-1.amazonaws.com/dev/echo/new/shipment -d '{foo:1, bar:2}'"
   },
   "dependencies": {
     "aws-sdk": "latest"
@@ -38,7 +37,7 @@
     "husky": "^0.13.2",
     "json-loader": "~0.5.0",
     "mocha": "^3.2.0",
-    "serverless": "1.8.0",
+    "serverless": "1.9.0",
     "serverless-build-plugin": "1.1.2",
     "snazzy": "^6.0.0",
     "source-map-support": "latest",
